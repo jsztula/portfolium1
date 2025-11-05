@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="get">
+  <input name="q" placeholder="Hledej produkt">
+  <button>Hledat</button>
+</form>
+
+{% if nalezeny %}
+<table><tr><th>ID</th><th>Název</th><th>Cena</th></tr>
+<tr><td>{{nalezeny.id}}</td><td>{{nalezeny.nazev}}</td><td>{{nalezeny.cena}} Kč</td></tr>
+</table>
+{% elif q %}<p>Nic nenalezeno.</p>{% endif %}
+
+<hr>
+<form method="post">
+  <input name="id" placeholder="ID">
+  <input name="nazev" placeholder="Název">
+  <input name="cena" placeholder="Cena">
+  <button>Přidat</button>
+</form>
+<p>{{ zprava }}</p>
+
+<table><tr><th>ID</th><th>Název</th><th>Cena</th></tr>
+{% for p in produkty %}
+<tr><td>{{p.id}}</td><td>{{p.nazev}}</td><td>{{p.cena}} Kč</td></tr>
+{% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+
+{% extends 'base.htm' %}
+
+{% block content %}
+
+{{users}}
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kontakty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Kontakty</h1>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Jméno</th>
+                    <th>Pozice</th>
+                    <th>Telefon</th>
+                    <th>E-mail</th>
+                    <th>Adresa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tomáš Dvořák</td>
+                    <td>Hlavní trenér</td>
+                    <td>+420 777 123 456</td>
+                    <td>tomas.dvorak@example.com</td>
+                    <td>Ostrava-Martinov</td>
+                </tr>
+                <tr>
+                    <td>Jan Novák</td>
+                    <td>Asistent trenéra</td>
+                    <td>+420 608 987 654</td>
+                    <td>jan.novak@example.com</td>
+                    <td>Ostrava-Poruba</td>
+                </tr>
+                <tr>
+                    <td>Petr Svoboda</td>
+                    <td>Vedoucí týmu</td>
+                    <td>+420 602 345 678</td>
+                    <td>petr.svoboda@example.com</td>
+                    <td>Ostrava</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+</body>
+</html>
+{% endblock %}

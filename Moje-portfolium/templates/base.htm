@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Moje portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% include 'baner.htm' %}
+    {% include 'menu.htm' %}
+    
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Moje Webovka{% endblock %}</title>
+
+</head>
+<body>
+    <header>
+        <h1>{% block header %}Webový generátor čísla{% endblock %}</h1>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8"><title>Eshop</title>
+<style>
+body{font-family:Arial;margin:40px;}
+table{border-collapse:collapse;width:60%;}
+th,td{border:1px solid #ccc;padding:6px;}
+th{background:#eee;}
+</style>
+</head>
+<body>
+<h1>Eshop</h1>
+{% block content %}{% endblock %}
+</body>
+</html>
+

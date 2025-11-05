@@ -1,0 +1,13 @@
+
+{% extends 'base.htm' %}
+
+{% block content %}
+    <h2>O mně</h2>
+    <p>Ve volném čase rád chodím na procházky se psem a do fitka. Rád se poznávám s novými lidmy protože sem extrovert tak mi to nedělá absolutní problém ale taky občas potřebuju svuj klid, když mi někdy rodiče odjedou na chatu tak si sam pustim film nebo sem s přítelkyní</p>
+    <p>IT mě zajímá, protože rád tvořím nové věci a baví mě řešit problémy. Chci být ajťákem, protože technologie mě inspirují a vidím v nich budoucnost.</p>
+    <ul>
+        {%for prvek in technologie %}
+            <li>{{prvek}}</li>
+        {%endfor %}
+    </ul>
+{% endblock %}
